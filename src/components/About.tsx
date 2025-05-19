@@ -3,17 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import modelVideo from '../assets/VistelligenceModel.mp4';
-
-import img1 from '../assets/1.png';
-import img2 from '../assets/2.png';
-import img3 from '../assets/3.png';
-import img4 from '../assets/4.png';
-import img5 from '../assets/5.png';
-import img6 from '../assets/6.png';
-import img7 from '../assets/7.png';
-
-const images = [img1, img2, img3, img4, img5, img6, img7];
+const images = [
+  '/assets/1.png',
+  '/assets/2.png',
+  '/assets/3.png',
+  '/assets/4.png',
+  '/assets/5.png',
+  '/assets/6.png',
+  '/assets/7.png',
+];
 
 const About = () => {
   return (
@@ -133,7 +131,7 @@ const About = () => {
             <div className="relative rounded-lg shadow-2xl overflow-hidden w-full group">
               <div className="overflow-hidden">
                 <video
-                  src={modelVideo}
+                  src="/assets/VistelligenceModel.mp4"
                   autoPlay
                   muted
                   loop
