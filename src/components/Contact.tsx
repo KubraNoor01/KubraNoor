@@ -10,7 +10,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
 
@@ -22,20 +21,21 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20" id="contact">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8" id="contact">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
           Get in Touch
         </h2>
-        
-        <div className="grid md:grid-cols-2 gap-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-white">Let's Connect</h3>
             <p className="text-gray-300">
               I'm always open to new opportunities and collaborations. Feel free to reach out!
             </p>
-            
-            <div className="flex space-x-4">
+
+            <div className="flex flex-wrap gap-4">
               {[
                 { icon: <Github className="w-6 h-6" />, link: "https://github.com/KubraNoor01" },
                 { icon: <Linkedin className="w-6 h-6" />, link: "https://www.linkedin.com/in/kubra-noor-45a495325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -45,14 +45,17 @@ const Contact = () => {
                 <a
                   key={index}
                   href={social.link}
-                  className="p-2 rounded-full bg-gray-800 text-purple-400 hover:bg-purple-500 hover:text-white transition-all transform hover:scale-110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-gray-800 text-purple-400 hover:bg-purple-500 hover:text-white transition-all transform hover:scale-110"
                 >
                   {social.icon}
                 </a>
               ))}
             </div>
           </div>
-          
+
+          {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <input
@@ -65,7 +68,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div>
               <input
                 type="email"
@@ -77,7 +80,7 @@ const Contact = () => {
                 required
               />
             </div>
-            
+
             <div>
               <textarea
                 name="message"
@@ -89,10 +92,10 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            
+
             <button
               type="submit"
-              className="w-full px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity"
+              className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity"
             >
               Send Message
             </button>
