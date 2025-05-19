@@ -3,6 +3,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
+import aboutPic from '../assets/aboutpic.jpg';
+import modelVideo from '../assets/VistelligenceModel.mp4';
+
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.png';
+import img7 from '../assets/7.png';
+
+const images = [img1, img2, img3, img4, img5, img6, img7];
+
 const About = () => {
   return (
     <section className="py-20 relative" id="about">
@@ -53,7 +66,7 @@ const About = () => {
             <SwiperSlide>
               <div className="relative bg-black rounded-xl overflow-hidden">
                 <img
-                  src="/dist/assets/aboutpic.jpg"
+                  src={aboutPic}
                   alt="Code"
                   className="w-full h-[300px] object-cover opacity-50"
                 />
@@ -73,38 +86,32 @@ const About = () => {
                 {
                   icon: <Code className="w-6 h-6 text-purple-500" />,
                   title: "Frontend Development",
-                  description:
-                    "Skilled in building responsive and interactive user interfaces using modern web technologies",
+                  description: "Skilled in building responsive and interactive user interfaces using modern web technologies",
                 },
                 {
                   icon: <Brain className="w-6 h-6 text-blue-500" />,
                   title: "Software Testing",
-                  description:
-                    "Familiar with various testing methods to ensure software quality and reliability",
+                  description: "Familiar with various testing methods to ensure software quality and reliability",
                 },
                 {
                   icon: <Brain className="w-6 h-6 text-blue-500" />,
                   title: "Version Control (Git/GitHub)",
-                  description:
-                    "Proficient in using Git for code management, collaboration, and version tracking",
+                  description: "Proficient in using Git for code management, collaboration, and version tracking",
                 },
                 {
                   icon: <Heart className="w-6 h-6 text-pink-500" />,
                   title: "Problem Solver",
-                  description:
-                    "Turning complex challenges into elegant solutions",
+                  description: "Turning complex challenges into elegant solutions",
                 },
                 {
                   icon: <Heart className="w-6 h-6 text-pink-500" />,
                   title: "Presentation & Communication",
-                  description:
-                    "Strong ability to convey ideas clearly through presentations and team collaboration.",
+                  description: "Strong ability to convey ideas clearly through presentations and team collaboration.",
                 },
                 {
                   icon: <Heart className="w-6 h-6 text-pink-500" />,
                   title: "Content Writing",
-                  description:
-                    "Proficient in crafting structured, engaging content with a background in editorial work",
+                  description: "Proficient in crafting structured, engaging content with a background in editorial work",
                 },
               ].map((item, index) => (
                 <div
@@ -127,7 +134,7 @@ const About = () => {
             <div className="relative rounded-lg shadow-2xl overflow-hidden w-full group">
               <div className="overflow-hidden">
                 <video
-                  src="/dist/assets/VistelligenceModel.mp4"
+                  src={modelVideo}
                   autoPlay
                   muted
                   loop
@@ -138,7 +145,7 @@ const About = () => {
               <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                 <p className="text-white text-center text-lg">
                   🎯 This video showcases the AI-generated visa recommendation output from{" "}
-     npm run dev             <span className="font-semibold">Vistelligence</span> – your smart travel assistant for personalized visa advice, success prediction, and interview prep. For detailed review, check the project section.
+                  <span className="font-semibold">Vistelligence</span> – your smart travel assistant for personalized visa advice, success prediction, and interview prep. For detailed review, check the project section.
                 </p>
               </div>
             </div>
@@ -156,11 +163,11 @@ const About = () => {
                 slidesPerView={1}
                 className="rounded-xl shadow-xl"
               >
-                {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                  <SwiperSlide key={num}>
+                {images.map((img, index) => (
+                  <SwiperSlide key={index}>
                     <img
-                      src={`/dist/assets/${num}.png`}
-                      alt={`Vistelligence Output ${num}`}
+                      src={img}
+                      alt={`Vistelligence Output ${index + 1}`}
                       className="w-full h-[300px] object-cover rounded-xl"
                     />
                   </SwiperSlide>
