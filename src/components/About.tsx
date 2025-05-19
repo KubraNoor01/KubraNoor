@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-import aboutPic from '../assets/aboutpic.jpg';
 import modelVideo from '../assets/VistelligenceModel.mp4';
 
 import img1 from '../assets/1.png';
@@ -66,7 +65,7 @@ const About = () => {
             <SwiperSlide>
               <div className="relative bg-black rounded-xl overflow-hidden">
                 <img
-                  src={aboutPic}
+                  src="/assets/aboutpic.jpg"
                   alt="Code"
                   className="w-full h-[300px] object-cover opacity-50"
                 />
