@@ -4,7 +4,7 @@ import { LazyImage } from './common/LazyImage';
 
 const projects = [
   {
-    title: "Vistelligent",
+    title: "Vistelligence",
     description: "Currently under development, expected to go live by late July or early August.",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=800",
     tech: ["React", "JavaScript", "Python", "MongoDB", "TensorFlow", "Node.Js"],
@@ -18,10 +18,7 @@ const projects = [
     description: "Curious to know more? I'm just a click away.",
     image: "/assets/portfolio.png",
     tech: ["React", "Tailwind CSS", "JavaScript", "TypeScript"],
-    links: {
-      github: "https://github.com/KubraNoor01/My-portfolio-website",
-      live: "https://KubraNoor.com"
-    }
+    
   },
   {
     title: "Tour explorer",
