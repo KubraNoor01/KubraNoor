@@ -37,26 +37,26 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 bg-gray-900/50" id="skills">
+    <section className="py-12 sm:py-16 md:py-20 bg-gray-900/50" id="skills">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
           Technical Skills
         </h2>
         
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-gray-800/50 hover:bg-gray-800/70 transition-all group"
+              className="p-4 sm:p-6 rounded-xl bg-gray-800/50 hover:bg-gray-800/70 transition-all group flex flex-col h-full"
             >
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center space-x-3 mb-4 sm:mb-6">
                 <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400 group-hover:text-purple-300 transition-colors">
                   {category.icon}
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white">{category.title}</h3>
               </div>
               
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5 flex-1">
                 {category.skills.map((skill, skillIndex) => {
                   const percent = skillPercents[skill];
                   return (
@@ -67,7 +67,7 @@ const Skills = () => {
                       </div>
                       <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transform origin-left transition-transform duration-1000 scale-x-0 group-hover:scale-x-100"
+                          className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full transition-all duration-1000"
                           style={{ width: `${percent}%` }}
                         ></div>
                       </div>

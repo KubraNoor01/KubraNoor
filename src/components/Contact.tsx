@@ -21,17 +21,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8" id="contact">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8" id="contact">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
           Get in Touch
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Let's Connect</h3>
-            <p className="text-gray-300">
+            <h3 className="text-xl sm:text-2xl font-semibold text-white">Let's Connect</h3>
+            <p className="text-gray-300 text-base sm:text-lg">
               I'm always open to new opportunities and collaborations. Feel free to reach out!
             </p>
 
@@ -48,6 +48,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-gray-800 text-purple-400 hover:bg-purple-500 hover:text-white transition-all transform hover:scale-110"
+                  aria-label="Social Link"
                 >
                   {social.icon}
                 </a>
@@ -56,7 +57,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-gray-900/60 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg">
             <div>
               <input
                 type="text"
@@ -64,7 +65,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all text-base sm:text-lg"
                 required
               />
             </div>
@@ -76,7 +77,7 @@ const Contact = () => {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all text-base sm:text-lg"
                 required
               />
             </div>
@@ -88,14 +89,14 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all resize-none"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400 transition-all resize-none text-base sm:text-lg"
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity"
+              className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:opacity-90 transition-opacity text-base sm:text-lg font-semibold"
             >
               Send Message
             </button>

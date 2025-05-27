@@ -39,13 +39,13 @@ const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8" id="projects">
+    <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8" id="projects">
       <div className="container mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-12 md:mb-16 bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
           Featured Projects
         </h2>
         
-        {/* Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
@@ -55,7 +55,7 @@ const Projects = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Image container with responsive height */}
-              <div className="relative h-48 sm:h-64 lg:h-56 xl:h-64">
+              <div className="relative h-48 xs:h-56 sm:h-64 md:h-56 lg:h-64">
                 <LazyImage
                   src={project.image}
                   alt={project.title}
@@ -65,17 +65,17 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
               </div>
               
-              <div className="absolute inset-0 flex flex-col justify-end p-6 transform transition-all duration-300">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">{project.title}</h3>
-                <p className="text-gray-300 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm sm:text-base leading-relaxed">
+              <div className="absolute inset-0 flex flex-col justify-end p-4 xs:p-5 sm:p-6 transform transition-all duration-300">
+                <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2">{project.title}</h3>
+                <p className="text-gray-300 mb-2 sm:mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm xs:text-base sm:text-base leading-relaxed">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-2 sm:mb-3">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 text-xs sm:text-sm bg-purple-500/20 text-purple-300 rounded"
+                      className="px-2 py-1 text-xs xs:text-sm sm:text-sm bg-purple-500/20 text-purple-300 rounded"
                     >
                       {tech}
                     </span>
