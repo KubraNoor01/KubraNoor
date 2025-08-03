@@ -31,8 +31,8 @@ const About = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {[
-            { icon: <Code className="w-6 h-6" />, value: "3+", label: "Years Experience" },
-            { icon: <Users className="w-6 h-6" />, value: "50+", label: "Projects Completed" },
+            { icon: <Code className="w-6 h-6" />, value: "Fresher(but passionate)", label: "" },
+            { icon: <Users className="w-6 h-6" />, value: "30+", label: "Projects Completed" },
             { icon: <Award className="w-6 h-6" />, value: "100%", label: "Client Satisfaction" },
             { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Availability" }
           ].map((stat, index) => (
