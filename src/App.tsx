@@ -2,8 +2,10 @@ import Navbar from './components/Navigation/Navbar';
 import Background from './components/Background';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
         <div className="max-w-screen-xl mx-auto">
           <Hero />
           <About />
+          <Skills />
           <Projects />
           <Contact />
         </div>
       </main>
+      <ScrollToTop />
     </div>
   );
 }
