@@ -57,11 +57,11 @@ const projects = [
   {
     title: "Banking System",
     description: "Java-based banking application with automated and manual testing for reliable transactions.",
-    longDescription: "A modular banking application built in Java, designed to handle core operations like Account Creation, Deposit, Withdrawal, Transfer, APR, and TimePass validations. Implemented 120+ manual test cases to ensure accurate transaction handling, overdraft prevention, and compliance with CD rules. Developed a JUnit suite with 95+ automated regression tests, integrated via Maven CI and GitHub Actions for continuous testing. Designed and implemented system logic, authored manual test cases, created UML diagrams, and managed bug tracking and enhancements in JIRA within Agile sprints.",
+    longDescription: "A modular banking application built in Java, designed to handle core operations like Account Creation, Deposit, Withdrawal, Transfer, APR, and TimePass validations. Implemented 120+ manual test cases to ensure accurate transaction handling, overdraft prevention, and compliance with CD rules. Developed a JUnit suite with 95+ automated regression tests, integrated via Maven CI and GitHub Actions for continuous testing. Designed and implemented system logic, authored manual test cases.",
     image: "/assets/banking.jpg",
     tech: ["Java", "JUnit", "Maven", "GitHub Actions", "JIRA", "UML"],
     links: {
-      github: "https://github.com/KubraNoor01/Banking-System.git"
+      github: "https://github.com/KubraNoor01/BankingSystem"
     },
     status: "Completed",
     featured: false
